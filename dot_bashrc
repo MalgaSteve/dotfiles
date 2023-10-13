@@ -1,0 +1,14 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ss='grim -g "$(slurp)"'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias poweroff='systemctl poweroff'
+#PS1=" \A \u \W > "
+export PS1="\[\e[1;36m\][\[\e[0;36m\]\u\[\e[0;35m\] \w\[\e[1;36m\]]\$\[\e[m\] "
+
+export EDITOR=nvim
+
+shopt -s autocd
+
